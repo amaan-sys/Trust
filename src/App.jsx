@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// layout components (common on all pages)
+// import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+
+// page components
+import Family from "./Pages/FamilyOffice/Family";
+import News from "./Pages/News/News";
+import Contact from "./Pages/Contact";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      {/* Overall app layout */}
+      <div className="min-h-screen flex flex-col">
+        {/* Common navigation on all pages */}
+        {/* <Navbar /> */}
+
+        {/* Page content */}
+        <main className="flex-1">
+          <Routes>
+            {/* You can point home to Family, or keep a separate home page later */}
+            <Route path="/" element={<Family />} />
+
+            {/* /family route */}
+            <Route path="/family" element={<Family />} />
+
+            {/* /news route */}
+            <Route path="/news" element={<News />} />
+
+            {/* /contact route */}
+            <Route path="/contact" element={<Contact />} />
+            
+            {/* Optional: 404 route */}
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+        </main>
+
+        {/* Common footer on all pages */}
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
