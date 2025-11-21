@@ -1,0 +1,386 @@
+/* AttorneyInFact.css - Attorney-In-Fact / Financial POA Page Styles */
+@import '../App.css';
+
+.wtc-page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Header */
+.wtc-header {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+.wtc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-badge {
+  width: 50px;
+  height: 50px;
+  background-color: #003d5c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.brand-text h1 {
+  font-size: 20px;
+  color: #003d5c;
+  margin: 0;
+  font-weight: 600;
+}
+
+.brand-text .subtext {
+  font-size: 13px;
+  color: #666;
+  margin: 4px 0 0 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.phone {
+  font-size: 14px;
+  color: #003d5c;
+  font-weight: 500;
+}
+
+.cta-btn {
+  background-color: #0099cc;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #007aa3;
+}
+
+/* Main Content */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.section-padding {
+  padding: 60px 40px;
+}
+
+.main-col {
+  background-color: transparent;
+}
+
+.page-title {
+  font-size: 36px;
+  color: #003d5c;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.main-col h3 {
+  font-size: 24px;
+  color: #003d5c;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.content-list li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: #666;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.content-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #0099cc;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* PDF Card */
+.pdf-card {
+  background-color: #f0f8ff;
+  border: 1px solid #d0e7f5;
+  border-radius: 5px;
+  padding: 25px;
+  margin: 40px 0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pdf-card .icon {
+  font-size: 48px;
+}
+
+.pdf-card h4 {
+  font-size: 18px;
+  color: #003d5c;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.pdf-card .small {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.download-link {
+  color: #0099cc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq {
+  margin-top: 50px;
+}
+
+.section-heading {
+  font-size: 28px;
+  color: #003d5c;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-list .item {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.faq-list summary {
+  font-weight: 600;
+  color: #003d5c;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.faq-list .desc {
+  margin-top: 12px;
+  color: #666;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Sidebar */
+.side-col.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.card h4 {
+  font-size: 18px;
+  color: #003d5c;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.card h5 {
+  font-size: 16px;
+  color: #003d5c;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.phone-small {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.phone-small a {
+  color: #0099cc;
+  text-decoration: none;
+}
+
+.phone-small a:hover {
+  text-decoration: underline;
+}
+
+.small-cta {
+  display: inline-block;
+  background-color: #0099cc;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.small-cta:hover {
+  background-color: #007aa3;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.mt-medium {
+  margin-top: 15px;
+}
+
+.card.hours a {
+  color: #0099cc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card.hours a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.wtc-footer {
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #0099cc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .header-actions {
+    flex-direction: column;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .wtc-container {
+    padding: 0 20px;
+  }
+
+  .section-padding {
+    padding: 40px 20px;
+  }
+}
