@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import Home from "./Pages/Home";                 
 import Family from "./Pages/FamilyOffice/Family";
 import News from "./Pages/News/News";
+import About from "./Pages/About/About";
 import Contact from "./Pages/Contact";
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
 
             {/* News page */}
             <Route path="/news" element={<News />} />
+
+            {/* About page */}
+            <Route path="/about" element={<About />} />
 
             {/* Contact page */}
             <Route path="/contact" element={<Contact />} />
