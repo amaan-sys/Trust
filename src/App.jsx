@@ -7,10 +7,10 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 // page components
-import Home from "./Pages/Home";                 // ⬅️ now a page
+import Home from "./Pages/Home";                 
 import Family from "./Pages/FamilyOffice/Family";
 import News from "./Pages/News/News";
-import Contact from "./Components/Contact/Contact";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
