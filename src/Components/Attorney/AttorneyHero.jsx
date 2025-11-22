@@ -1,6 +1,6 @@
 import React from "react";
 import attorneyHeaderImage from "../../assets/Familyattorney.jpg";
-import AttorneyAdmin from "../../assets/AttorneyAdmin.jpg";
+import AttorneyAdmin from "../../assets/Attorneyadmin.jpg";
 
 export default function AttorneyHero() {
   return (
