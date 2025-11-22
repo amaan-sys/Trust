@@ -1,6 +1,6 @@
 import React from "react";
-import FamilyOff from "../../assets/Familyoff.jpg";
-import FamilyAdmin from "../../assets/Familysheet.jpg";
+import Familyoff from "../../assets/Familyoff.jpg";
+import Familyadmin from "../../assets/Familysheet.jpg";
 
 export default function FamilyOfficeSection() {
   return (
@@ -13,7 +13,7 @@ export default function FamilyOfficeSection() {
       {/* HERO BANNER IMAGE - Full width and tall */}
       <div className="w-full h-96 overflow-hidden flex items-end">
         <img 
-          src={FamilyOff} 
+          src={Familyoff} 
           alt="Family office banner" 
           className="w-full h-auto object-contain"
         />
@@ -93,7 +93,7 @@ export default function FamilyOfficeSection() {
               <div className="flex justify-center items-start">
                 <div className="w-full">
                   <img 
-                    src={FamilyAdmin} 
+                    src={Familyadmin} 
                     alt="Family office administration" 
                     className="w-full h-auto rounded-lg shadow-lg object-cover"
                   />
