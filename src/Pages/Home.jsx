@@ -1,5 +1,5 @@
-import homeimg from "../assets/we-trust-Company.png";
-import bgimg from "../assets/Mature-Adult.jpg";
+import homeimg from "../assets/wetrustCompany.png";
+import bgimg from "../assets/MatureAdult.jpg";
 import c1 from "../assets/card1.jpg";
 import c2 from "../assets/card2.jpg";
 import c3 from "../assets/card3.jpg";

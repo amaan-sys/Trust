@@ -1,5 +1,5 @@
 import React from "react";
-import FamilyOff from "../../assets/FamilyOff.jpg";
+import FamilyOff from "../../assets/Familyoff.jpg";
 import FamilyAdmin from "../../assets/Familysheet.jpg";
 
 export default function FamilyOfficeSection() {
