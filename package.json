@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/nanum-gothic": "^5.2.7",
+    "@fontsource/noto-sans": "^5.2.10",
+    "@fontsource/open-sans": "^5.2.7",
     "@tailwindcss/vite": "^4.1.17",
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",

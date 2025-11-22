@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Define font variables */
+:root {
+  --font-nanum: 'Nanum Gothic', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
+  --font-noto-sans: 'Noto Sans', sans-serif;
+}
+
+/* Apply default font to body */
+body {
+  font-family: var(--font-noto-sans);
+}
+
+/* Keyframes */
 @keyframes slideUp {
   0% {
     transform: translateY(20px);

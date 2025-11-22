@@ -11,6 +11,9 @@ import Home from "./Pages/Home";
 import Family from "./Pages/FamilyOffice/Family";
 import News from "./Pages/News/News";
 import Contact from "./Pages/Contact";
+import Attorney from "./Pages/Attorney/Attorney";
+import Trust from "./Pages/Trusts/Trust";
+import Estate from "./Pages/Estate/Estate";
 
 function App() {
   return (
@@ -33,6 +36,15 @@ function App() {
 
             {/* Contact page */}
             <Route path="/contact" element={<Contact />} />
+
+            {/* Attorney page */}
+            <Route path="/attorney" element={<Attorney />} />
+
+            {/* Trust page */}
+            <Route path="/trust" element={<Trust />} />
+
+            {/* Estate page */}
+            <Route path="/estate" element={<Estate />} />
 
             {/* Optional 404 route
             <Route path="*" element={<NotFound />} /> */}

@@ -7,7 +7,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white shadow-md sticky top-0 z-50">
+    <header className="w-full bg-white shadow-md sticky top-0 z-10">
       
       {/* TOP BAR */}
       <div className="bg-[#004A6D] text-white text-sm px-6 py-3 flex flex-col md:flex-row items-center justify-between">
@@ -42,12 +42,11 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 text-lg text-gray-700">
           <Link to="/" className="hover:text-[#004A6D]">Home</Link>
-          <Link to="/estates" className="hover:text-[#004A6D]">Estates</Link>
-          <Link to="/trusts" className="hover:text-[#004A6D]">Trusts</Link>
-          <Link to="/attorney-in-fact" className="hover:text-[#004A6D]">Attorney-in-Fact</Link>
+          <Link to="/estate" className="hover:text-[#004A6D]">Estates</Link>
+          <Link to="/trust" className="hover:text-[#004A6D]">Trusts</Link>
+          <Link to="/attorney" className="hover:text-[#004A6D]">Attorney-in-Fact</Link>
           <Link to="/family" className="hover:text-[#004A6D]">Family Office</Link>
           <Link to="/news" className="hover:text-[#004A6D]">News</Link>
-          <Link to="/about" className="hover:text-[#004A6D]">About</Link>
           <Link to="/contact" className="hover:text-[#004A6D]">Contact</Link>
         </nav>
       </div>
@@ -61,12 +60,11 @@ export default function Navbar() {
         <nav className="flex flex-col items-start px-6 gap-4 text-gray-800 text-lg">
           {[
             { name: "Home", to: "/" },
-            { name: "Estates", to: "/estates" },
-            { name: "Trusts", to: "/trusts" },
-            { name: "Attorney-in-Fact", to: "/attorney-in-fact" },
+            { name: "Estates", to: "/estate" },
+            { name: "Trusts", to: "/trust" },
+            { name: "Attorney-in-Fact", to: "/attorney" },
             { name: "Family Office", to: "/family" },
             { name: "News", to: "/news" },
-            { name: "About", to: "/about" },
             { name: "Contact", to: "/contact" },
           ].map((item) => (
             <Link

@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-/* Optional: you can delete the logo styles if not using Vite’s template */
+/* Optional: you can delete the logo styles if not using Vite's template */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -40,4 +40,20 @@
 
 .read-the-docs {
   color: #888;
-} 
+}
+
+/* Apply different fonts to different elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-nanum);
+  font-weight: 700;
+}
+
+/* Use Open Sans for buttons and navigation */
+button, nav, .navbar {
+  font-family: var(--font-open-sans);
+}
+
+/* Use Noto Sans for body text (already set in index.css) */
+p, li, div {
+  font-family: var(--font-noto-sans);
+}
