@@ -13,6 +13,9 @@ import Family from "../assets/Familyoffice.png";
 import Safeguard from "../assets/Safeguard.png";
 import Peace from "../assets/Peace.png";
 
+// import Tetimonial from "../Components/Testimonial/Testimonial";
+import { Link } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -141,9 +144,10 @@ export default function Home() {
                 </p>
 
 
-                <button className="mt-6 bg-[#004A6D] text-white px-6 py-3 rounded shadow hover:bg-[#d66a0b] transition-all duration-300 ease-in-out hover:scale-110">
+                <Link to="/employment" className="mt-6 inline-block bg-[#004A6D] text-white px-6 py-3 rounded shadow hover:bg-[#d66a0b] transition-all duration-300 ease-in-out hover:scale-110">
                     Employment Opportunities
-                </button>
+                </Link>
+
             </div>
 
             {/* SERVICES SECTION */}
@@ -152,12 +156,12 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
-                        { title: "Estates", img: c1 },
-                        { title: "Trusts", img: c2 },
-                        { title: "Attorney-In-Fact", img: c3 },
-                        { title: "Family Office", img: c4 },
+                        { title: "Estates", img: c1, route: "/estate" },
+                        { title: "Trusts", img: c2, route: "/trust" },
+                        { title: "Attorney-In-Fact", img: c3, route: "/attorney" },
+                        { title: "Family Office", img: c4, route: "/family" },
                     ].map((card, i) => (
-                        <div key={i} className="border shadow overflow-hidden">
+                        <Link key={i} to={card.route} className="border shadow overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
                             <img
                                 src={card.img}
                                 className="w-full h-40 object-cover p-2 transition-transform duration-300 hover:scale-95"
@@ -165,7 +169,7 @@ export default function Home() {
                             <p className="text-xl font-semibold py-4 text-[#004A6D]">
                                 {card.title}
                             </p>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
@@ -174,6 +178,7 @@ export default function Home() {
                     Financial Institutions (DFI) in 2016 and is now recognized and regulated as a Washington state trust
                     company. We participate in regularly scheduled exams to maintain our trust company designation.
                 </p>
+                {/* <Tetimonial /> */}
             </section>
 
 
@@ -261,15 +266,17 @@ export default function Home() {
             </div>
             {/* Buttons SECTION */}
             <section className="px-6 md:px-16 lg:px-40 max-w-6xl mx-auto text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-60 pb-10">
-
+                <a href="/about">
                 <button className="w-full mt-4 bg-[#004A6D] text-white px-6 py-3 rounded shadow hover:scale-110 transition-all duration-300">
                     Meet the People at WE Trust
                 </button>
+                </a>
 
+                <Link to="/testimonials">
                 <button className="w-full mt-4 bg-[#004A6D] text-white px-6 py-3 rounded shadow hover:scale-110 transition-all duration-300">
                     See Our Client Testimonials
-                </button>
-
+                </button>   
+                </Link>
             </section>
 
 

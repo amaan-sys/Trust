@@ -2,11 +2,21 @@ import React from "react";
 
 const NewsHeader = () => {
   return (
-    <div className="w-full bg-white pt-12 pb-6">
+    <div className="w-full bg-white pb-6">
       {/* Google Fonts */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;600;700&family=Noto+Sans+Gothic:wght@400;600;700&display=swap');
       `}</style>
+
+      {/* Top thin border */}
+      <div
+        style={{
+          width: "100%",
+          height: "8px",
+          backgroundColor: "#083b54",
+          marginBottom: "40px",
+        }}
+      ></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}

@@ -1,0 +1,132 @@
+/* ====== Container ====== */
+.testimonial-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background: #ffffff; /* match screenshot white bg */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.testimonial-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 80px; /* space for arrows */
+  box-sizing: border-box;
+}
+
+/* ====== Card ====== */
+.testimonial-card {
+  background-color: #f9f9f9;
+  border-radius: 30px; /* pill corners similar to screenshot */
+  border: 2px solid #0080c8; /* blue border */
+  padding: 40px 60px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Quote text */
+.testimonial-quote {
+  font-size: 22px;
+  font-style: italic;
+  color: #666666;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+/* Name */
+.testimonial-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444444;
+  margin: 0 0 6px 0;
+}
+
+/* Location (blue link style) */
+.testimonial-location {
+  font-size: 14px;
+  color: #0080c8;
+  margin: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ====== Arrows ====== */
+.testimonial-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+  border: 1px solid #0080c8;
+  background-color: #ffffff;
+  color: #0080c8;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.testimonial-arrow-left {
+  left: 20px; /* sits just outside card */
+}
+
+.testimonial-arrow-right {
+  right: 20px;
+}
+
+.testimonial-arrow:hover {
+  background-color: #0080c8;
+  color: #ffffff;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    padding: 0 40px;
+  }
+
+  .testimonial-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 18px;
+  }
+
+  .testimonial-name {
+    font-size: 16px;
+  }
+
+  .testimonial-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .testimonial-arrow-left {
+    left: 8px;
+  }
+
+  .testimonial-arrow-right {
+    right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-wrapper {
+    padding: 0 28px;
+  }
+
+  .testimonial-card {
+    padding: 24px 18px;
+  }
+}

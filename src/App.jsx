@@ -1,6 +1,6 @@
 // src/App.jsx
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 // layout components (common on all pages)
 import Navbar from "./Components/Navbar";
@@ -12,13 +12,26 @@ import Family from "./Pages/FamilyOffice/Family";
 import News from "./Pages/News/News";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact";
+import Employment from "./Components/Employment";
 import Attorney from "./Pages/Attorney/Attorney";
 import Trust from "./Pages/Trusts/Trust";
 import Estate from "./Pages/Estate/Estate";
 
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         {/* Common navigation on all pages */}
         <Navbar />
@@ -32,11 +45,17 @@ function App() {
             {/* Family Office page */}
             <Route path="/family" element={<Family />} />
 
+            {/* Estate page */}   
+            <Route path="/estate" element={<Estate />} />
+            
             {/* News page */}
             <Route path="/news" element={<News />} />
 
-            {/* About page */}
+            {/* About Us page */}
             <Route path="/about" element={<About />} />
+            
+            {/* Employment page */}
+            <Route path="/employment" element={<Employment />} />
 
             {/* Contact page */}
             <Route path="/contact" element={<Contact />} />
@@ -46,12 +65,6 @@ function App() {
 
             {/* Trust page */}
             <Route path="/trust" element={<Trust />} />
-
-            {/* Estate page */}
-            <Route path="/estate" element={<Estate />} />
-
-            {/* Optional 404 route
-            <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </main>
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import bgImg from "../../assets/contact.jpg";
 
@@ -46,6 +47,16 @@ const Contact = () => {
         <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;600;700&family=Noto+Sans+Gothic:wght@400;600;700&display=swap');
       `}</style>
+
+      {/* Top thin border */}
+      <div
+        style={{
+          width: "100%",
+          height: "8px",
+          backgroundColor: "#083b54",
+          marginBottom: "40px",
+        }}
+      ></div>
 
         {/* HEADER SECTION */}
         <div className="bg-gray-50 py-16  px-20">

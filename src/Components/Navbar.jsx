@@ -46,6 +46,7 @@ export default function Navbar() {
           <Link to="/trust" className="hover:text-[#004A6D]">Trusts</Link>
           <Link to="/attorney" className="hover:text-[#004A6D]">Attorney-in-Fact</Link>
           <Link to="/family" className="hover:text-[#004A6D]">Family Office</Link>
+          <Link to="/about" className="hover:text-[#004A6D]">About</Link>
           <Link to="/news" className="hover:text-[#004A6D]">News</Link>
           <Link to="/contact" className="hover:text-[#004A6D]">Contact</Link>
         </nav>
