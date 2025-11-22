@@ -1,9 +1,8 @@
-/* Remove Vite’s default global constraints */
-#root {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  text-align: left;
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 /* Optional: you can delete the logo styles if not using Vite’s template */
@@ -41,4 +40,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} 

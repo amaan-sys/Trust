@@ -3,38 +3,39 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // layout components (common on all pages)
-// import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
 // page components
+import Home from "./Pages/Home";                 // ⬅️ now a page
 import Family from "./Pages/FamilyOffice/Family";
 import News from "./Pages/News/News";
-import Contact from "./Pages/Contact";
+import Contact from "./Components/Contact/Contact";
+
 function App() {
   return (
     <Router>
-      {/* Overall app layout */}
       <div className="min-h-screen flex flex-col">
         {/* Common navigation on all pages */}
-        {/* <Navbar /> */}
+        <Navbar />
 
-        {/* Page content */}
+        {/* Page content changes with route */}
         <main className="flex-1">
           <Routes>
-            {/* You can point home to Family, or keep a separate home page later */}
-            <Route path="/" element={<Family />} />
+            {/* Home page */}
+            <Route path="/" element={<Home />} />
 
-            {/* /family route */}
+            {/* Family Office page */}
             <Route path="/family" element={<Family />} />
 
-            {/* /news route */}
+            {/* News page */}
             <Route path="/news" element={<News />} />
 
-            {/* /contact route */}
+            {/* Contact page */}
             <Route path="/contact" element={<Contact />} />
-            
-            {/* Optional: 404 route */}
-            {/* <Route path="*" element={<NotFound />} /> */}
+
+            {/* Optional 404 route
+            <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </main>
 
