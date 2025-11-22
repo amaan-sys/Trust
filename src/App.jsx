@@ -57,6 +57,12 @@ function App() {
             {/* Employment page */}
             <Route path="/employment" element={<Employment />} />
 
+            {/* About Us page */}
+            <Route path="/about" element={<About />} />
+            
+            {/* Employment page */}
+            <Route path="/employment" element={<Employment />} />
+
             {/* Contact page */}
             <Route path="/contact" element={<Contact />} />
 
