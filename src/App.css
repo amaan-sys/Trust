@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+/* Optional: you can delete the logo styles if not using Vite’s template */
 .logo {
   height: 6em;
   padding: 1.5em;
