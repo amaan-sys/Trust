@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/creditor_logo.png";
 
 export default function Navbar() {
@@ -15,18 +16,20 @@ export default function Navbar() {
         </p>
         <p className="text-center">Call Us: (206) 781-6997</p>
 
-        <button className="mt-2 md:mt-0 border border-white px-3 py-1 rounded hover:bg-[#0da1e6] transition">
+        <Link to="/contact" className="mt-2 md:mt-0 inline-block border border-white px-3 py-1 rounded hover:bg-[#0da1e6] transition text-white">
           Contact WE Trust Today
-        </button>
+        </Link>
       </div>
 
       {/* MAIN NAV */}
       <div className="flex items-center justify-between px-6 py-4">
-        <img
-          src={Logo}
-          alt="WE Trust Company"
-          className="h-14 object-contain"
-        />
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="WE Trust Company"
+            className="h-14 object-contain"
+          />
+        </Link>
 
         {/* Hamburger (mobile) */}
         <button
@@ -38,14 +41,14 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 text-lg text-gray-700">
-          <a href="#home" className="hover:text-[#004A6D]">Home</a>
-          <a href="#estates" className="hover:text-[#004A6D]">Estates</a>
-          <a href="#trusts" className="hover:text-[#004A6D]">Trusts</a>
-          <a href="#aif" className="hover:text-[#004A6D]">Attorney-in-Fact</a>
-          <a href="#family" className="hover:text-[#004A6D]">Family Office</a>
-          <a href="#news" className="hover:text-[#004A6D]">News</a>
-          <a href="#about" className="hover:text-[#004A6D]">About</a>
-          <a href="#contact" className="hover:text-[#004A6D]">Contact</a>
+          <Link to="/" className="hover:text-[#004A6D]">Home</Link>
+          <Link to="/estates" className="hover:text-[#004A6D]">Estates</Link>
+          <Link to="/trusts" className="hover:text-[#004A6D]">Trusts</Link>
+          <Link to="/attorney-in-fact" className="hover:text-[#004A6D]">Attorney-in-Fact</Link>
+          <Link to="/family" className="hover:text-[#004A6D]">Family Office</Link>
+          <Link to="/news" className="hover:text-[#004A6D]">News</Link>
+          <Link to="/about" className="hover:text-[#004A6D]">About</Link>
+          <Link to="/contact" className="hover:text-[#004A6D]">Contact</Link>
         </nav>
       </div>
 
@@ -57,23 +60,23 @@ export default function Navbar() {
       >
         <nav className="flex flex-col items-start px-6 gap-4 text-gray-800 text-lg">
           {[
-            "home",
-            "estates",
-            "trusts",
-            "aif",
-            "family",
-            "news",
-            "about",
-            "contact",
+            { name: "Home", to: "/" },
+            { name: "Estates", to: "/estates" },
+            { name: "Trusts", to: "/trusts" },
+            { name: "Attorney-in-Fact", to: "/attorney-in-fact" },
+            { name: "Family Office", to: "/family" },
+            { name: "News", to: "/news" },
+            { name: "About", to: "/about" },
+            { name: "Contact", to: "/contact" },
           ].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
+            <Link
+              key={item.to}
+              to={item.to}
               onClick={() => setOpen(false)}
-              className="hover:text-[#004A6D] capitalize"
+              className="hover:text-[#004A6D]"
             >
-              {item.replace("aif", "Attorney-in-Fact")}
-            </a>
+              {item.name}
+            </Link>
           ))}
         </nav>
       </div>
