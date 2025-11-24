@@ -4,13 +4,13 @@ import hero1 from "../assets/mature.jpg";
 import hero2 from "../assets/elderlycouplehome.jpg";
 import hero3 from "../assets/happymultiracialhome.jpg";
 
-import c1 from "../assets/card1.jpg";
-import c2 from "../assets/card2.jpg";
-import c3 from "../assets/card3.jpg";
+import c1 from "../assets/Estatess.jpg";
+import c2 from "../assets/Trusttt.jpg";
+import c3 from "../assets/Attorney.jpg";
 import c4 from "../assets/card4.jpg";
 
-import Family from "../assets/Familyoffice.png";
-import Safeguard from "../assets/Safeguard.png";
+import Family from "../assets/FamilyPic.jpg";
+import Safeguard from "../assets/Safe.jpg";
 import Peace from "../assets/Peace.png";
 
 // import Tetimonial from "../Components/Testimonial/Testimonial";

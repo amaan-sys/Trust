@@ -1,11 +1,12 @@
 import React from "react";
-import estateHeaderImage from "../../assets/card1.jpg";
+import estateHeaderImage from "../../assets/Estatess.jpg";
 import EstateAdmin from "../../assets/EstateAdmin.jpg";
+
 export default function EstateHero() {
   return (
     <>
-      {/* HERO BANNER IMAGE */}
-      <div className="relative w-full h-[500px] mb-10">
+      {/* HERO BANNER */}
+      <div className="relative w-full h-[420px] mb-10">
         <img
           src={estateHeaderImage}
           alt="Estate Administration banner"
@@ -14,51 +15,63 @@ export default function EstateHero() {
         <div className="absolute inset-0 bg-white/20"></div>
       </div>
 
-      <div className="w-full sm:px-10 lg:px-10">
+      <div className="w-full bg-white">
         {/* Google Fonts */}
         <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;600;700&family=Noto+Sans+Gothic:wght@400;600;700&display=swap');
-      `}</style>
+          @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;600;700&family=Noto+Sans+Gothic:wght@400;600;700&display=swap');
+        `}</style>
 
-        {/* MAIN CONTENT SECTION */}
-        <div className="w-full bg-white py-12 sm:py-5">
-          <div className="w-full px-4 sm:px-8">
+        {/* MAIN CONTENT */}
+        <div className="py-10">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            {/* Title */}
+            {/* Centered Title */}
             <h1
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#003d5c] mb-8 sm:mb-12 text-center mx-auto"
+              className="text-3xl sm:text-4xl font-bold text-[#003d5c] text-center mb-10"
               style={{ fontFamily: "'Noto Sans Gothic', sans-serif" }}
             >
               Estate Administration Services
             </h1>
 
-            {/* Paragraph Section */}
-            <div className="w-full mb-12 sm:mb-16 max-w-4xl mx-auto">
+            {/* Paragraph Block */}
+            <div className="max-w-4xl mx-auto mb-14 text-center lg:text-left">
               <p
-                className="text-sm sm:text-base text-gray-700 leading-5 sm:leading-7 mb-6"
+                className="text-base text-gray-700 leading-7 mb-6"
                 style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
               >
-                Selecting a Personal Representative, also known as an Executor, to oversee your affairs after you pass is a crucial aspect of estate planning. Many individuals opt to appoint a professional fiduciary for various reasons.
+                Selecting a Personal Representative, also known as an Executor,
+                to oversee your affairs after you pass is a crucial aspect of
+                estate planning. Many individuals opt to appoint a professional
+                fiduciary for various reasons.
               </p>
 
               <h3
-                className="text-lg sm:text-xl font-bold text-[#003d5c] mb-4"
+                className="text-xl font-bold text-[#003d5c] mb-4"
                 style={{ fontFamily: "'Open Sans', sans-serif" }}
               >
                 Reasons Might Include:
               </h3>
 
               <ul
-                className="space-y-3 mb-6 text-sm sm:text-base text-gray-700 leading-6"
+                className="space-y-3 text-gray-700 leading-7"
                 style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
               >
                 {[
-                  { title: "Objectivity", desc: "Choosing a professional fiduciary eliminates potential conflicts of interest among family members. Entrusting these responsibilities to a professional ensures that estate assets are managed and distributed according to your plan." },
-                  { title: "Expertise", desc: "The role of a Personal Representative requires knowledge of estate and tax law. Our team of seasoned professionals has years of experience in estate administration, ensuring a thorough understanding of the complexities involved in carrying out your final wishes." },
-                  { title: "Oversight", desc: "As a Washington chartered trust company, our business activities are periodically reviewed and examined by the Washington State Department of Financial Institutions, providing an additional layer of oversight and accountability." },
-                ].map((reason, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="mr-3">•</span>
+                  {
+                    title: "Objectivity",
+                    desc: "A professional fiduciary eliminates conflicts of interest and ensures neutral handling of assets.",
+                  },
+                  {
+                    title: "Expertise",
+                    desc: "Our team has years of experience and understands the complexities of estate and tax law.",
+                  },
+                  {
+                    title: "Oversight",
+                    desc: "We are examined by the Washington State DFI, ensuring accountability and compliance.",
+                  },
+                ].map((reason, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="mr-2 mt-1">•</span>
                     <div>
                       <strong>{reason.title}:</strong> {reason.desc}
                     </div>
@@ -68,69 +81,68 @@ export default function EstateHero() {
             </div>
 
             {/* Two Column Layout */}
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-26 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
 
-                {/* LEFT TEXT */}
-                <div>
-                  <h2
-                    className="text-xl sm:text-2xl font-bold text-[#003d5c] mb-6 sm:mb-8"
-                    style={{ fontFamily: "'Open Sans', sans-serif" }}
-                  >
-                    AS THE PERSONAL REPRESENTATIVE OF YOUR ESTATE, WE WILL:
-                  </h2>
+              {/* LEFT CONTENT */}
+              <div>
+                <h2
+                  className="text-2xl font-bold text-[#003d5c] mb-6"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  AS THE PERSONAL REPRESENTATIVE OF YOUR ESTATE, WE WILL:
+                </h2>
 
-                  <ul
-                    className="space-y-3 text-sm sm:text-base text-gray-700 leading-4 sm:leading-5 mb-10 sm:mb-12"
-                    style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
-                  >
-                    {[
-                      "Work with an attorney to open a probate in court.",
-                      "Communicate with beneficiaries.",
-                      "Furnish each beneficiary with a copy of the Will.",
-                      "Notify potential creditors and settle all valid debts.",
-                      "Marshal, inventory and manage estate assets.",
-                      "Facilitate the sale of real property or other assets.",
-                      "File required income tax returns.",
-                      "File required state and federal estate tax return.",
-                      "Distribute estate assets to beneficiaries.",
-                      "Provide a detailed accounting to beneficiaries and/or the probate court.",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="mr-3">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Contact Button */}
-                  <button
-                    className="bg-[#003d5c] hover:bg-[#002a42] text-white font-bold py-3 px-8 rounded-lg transition-colors mb-6"
-                    style={{ fontFamily: "'Open Sans', sans-serif" }}
-                  >
-                    Contact WE Trust Today
-                  </button>
-
-                  <p
-                    className="text-[#003d5c] font-medium underline cursor-pointer"
-                    style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
-                  >
-                    Estate Administration Information Sheet (PDF)
-                  </p>
-                </div>
-
-                {/* RIGHT PLACEHOLDER */}
-                <div className="flex justify-center items-start">
-                  <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <img
-                      src={EstateAdmin}
-                      alt="Estate Administration"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                </div>
-
+                <ul
+                  className="space-y-3 text-gray-700 leading-7"
+                  style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
+                >
+                  {[
+                    "Work with an attorney to open a probate in court.",
+                    "Communicate with beneficiaries.",
+                    "Furnish each beneficiary with a copy of the Will.",
+                    "Notify potential creditors and settle all valid debts.",
+                    "Marshal, inventory and manage estate assets.",
+                    "Facilitate the sale of real property or other assets.",
+                    "File required income tax returns.",
+                    "File required state and federal estate tax return.",
+                    "Distribute estate assets to beneficiaries.",
+                    "Provide a detailed accounting to beneficiaries and/or the probate court.",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="mr-2 mt-1">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
+
+              {/* RIGHT IMAGE + BUTTONS */}
+              <div className="flex flex-col items-center lg:items-end gap-6">
+                {/* Image */}
+                <div className="w-full max-w-md h-80 bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src={EstateAdmin}
+                    alt="Estate Administration"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Button + PDF — BELOW IMAGE */}
+                <button
+                  className="bg-[#003d5c] hover:bg-[#002a42] text-white font-bold py-3 px-8 rounded-lg transition-all"
+                  style={{ fontFamily: "'Open Sans', sans-serif" }}
+                >
+                  Contact WE Trust Today
+                </button>
+
+                <p
+                  className="text-[#003d5c] underline cursor-pointer font-medium"
+                  style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
+                >
+                  Estate Administration Information Sheet (PDF)
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
