@@ -1,95 +1,191 @@
 import React, { useState } from "react";
 
 export default function TrustAdmin() {
+  const trustTypes = [
+    {
+      title: "Revocable Living Trust",
+      desc: "Created during life and can be amended. Helps with smooth management and continuity of assets.",
+    },
+    {
+      title: "Irrevocable Trust",
+      desc: "Cannot be changed once created. Often used for estate tax efficiency or asset protection.",
+    },
+    {
+      title: "Special Needs Trust",
+      desc: "Provides supplemental support while preserving eligibility for government assistance.",
+    },
+    {
+      title: "Testamentary Trust",
+      desc: "Established through a Will and becomes effective after the grantor’s death.",
+    },
+    {
+      title: "Credit Shelter Trust",
+      desc: "Used by married couples to reduce estate taxes and protect long-term family wealth.",
+    },
+    {
+      title: "Settlement Trust",
+      desc: "Designed to protect and grow funds received from legal or injury settlements.",
+    },
+  ];
+
+  const faqs = [
+    {
+      q: "What is a Professional Trustee?",
+      a: "A professional trustee manages and administers trusts with expertise in law, finance, compliance, and beneficiary relations. They act as a neutral, experienced party focused on carrying out the terms of the trust.",
+    },
+    {
+      q: "What is a Trust Agreement?",
+      a: "A Trust Agreement is the legal document that establishes the trust. It outlines how assets are managed, invested, and distributed, and defines the roles of the trustee and the rights of the beneficiaries.",
+    },
+    {
+      q: "Why select WE Trust Company?",
+      a: "WE Trust Company is regulated, impartial, and audited. Our team provides structure, consistency, and professional oversight, with a fiduciary duty to act solely in the best interests of beneficiaries.",
+    },
+    {
+      q: "How do I name WE Trust in my documents?",
+      a: "Use this language: “WE Trust Company, a Washington chartered trust company, and its successor and assigns.” Your estate planning attorney can include this in your documents.",
+    },
+    {
+      q: "How are trustee fees charged?",
+      a: "We typically charge fees based on assets held in trust. A transparent fee schedule is available upon request, and we are happy to review it with you and your advisors.",
+    },
+  ];
+
+  const [openIndex, setOpenIndex] = useState(0); // first FAQ open by default
+
+  const toggleFAQ = (index) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <div className="w-full bg-white py-12 px-4 sm:px-8">
+    <section className="relative w-full py-24 px-6 bg-gradient-to-b from-[#EAF4FF] via-[#F7FAFF] to-white overflow-hidden">
+      {/* Soft background accents */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/30 blur-[110px] rounded-full animate-pulse" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-300/20 blur-[120px] rounded-full animate-pulse delay-200" />
+
       {/* Google Fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;600;700&family=Noto+Sans+Gothic:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
       `}</style>
 
-      <div className="max-w-4xl mx-auto">
-        {/* Trust Types Section */}
-        <div className="mb-12">
-          <h2
-            className="text-2xl sm:text-3xl font-bold text-[#003d5c] mb-8"
-            style={{ fontFamily: "'Open Sans', sans-serif" }}
-          >
-            Trust Types We Manage
-          </h2>
+      <div className="relative max-w-6xl mx-auto">
+        {/* HEADER */}
+        <div className="text-center mb-16">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#007dc5] font-semibold">
+            Trust Administration
+          </p>
 
-          <ul
-            className="space-y-4 text-sm sm:text-base text-gray-700 leading-6"
-            style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
+          <h1
+            className="text-4xl sm:text-5xl font-bold text-[#003d5c] mt-3 drop-shadow-sm"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
-            {[
-              { title: "Revocable Living Trust", desc: "Created during one's lifetime and effective immediately upon signing. The grantor retains ownership and control of the property in the trust and can change the trust terms, including the trustees and beneficiaries." },
-              { title: "Irrevocable Trust", desc: "A trust where the grantor cannot change the trust after its creation. Grantors may choose such trust to limit estate taxes or to shield assets from creditors." },
-              { title: "Special Needs Trust", desc: "A trust created for an individual with special needs. This trust can provide supplemental income for a person with special needs who may also qualify for governmental support." },
-              { title: "Testamentary Trust", desc: "A trust created within a Will, that is funded and effective after the grantor has died." },
-              { title: "Credit Shelter Trust", desc: "A tax planning tool often used by married couples to minimize or avoid estate tax liabilities. Also known as AB or Bypass Trusts." },
-              { title: "Settlement Trust", desc: "A trust typically established to preserve funds awarded to a personal injury plaintiff. Designed to grow assets and act as a spendthrift tool." },
-            ].map((trust, index) => (
-              <li key={index} className="flex items-start">
-                <span className="mr-3 font-bold">•</span>
-                <div>
-                  <strong>{trust.title}:</strong> {trust.desc}
-                </div>
-              </li>
-            ))}
-          </ul>
+            Trust Types & Frequently Asked Questions
+          </h1>
+
+          <div className="w-40 h-1 mx-auto mt-6 bg-gradient-to-r from-[#004A6D] via-blue-400 to-[#004A6D] rounded-full animate-pulse" />
         </div>
 
-        {/* FAQ Section */}
-        <div>
-          <h2
-            className="text-2xl sm:text-3xl font-bold text-[#003d5c] mb-8"
-            style={{ fontFamily: "'Open Sans', sans-serif" }}
-          >
-            Trust Administration Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-8">
-            {[
-              {
-                question: "What is a Professional Trustee?",
-                answer: "An individual or company appointed and compensated to manage and administer trusts on behalf of individuals or families. Professional trustees have expertise in trust administration, legal compliance, and financial management. A trustee holds legal title to the property in trust for the benefit of the ultimate recipient."
-              },
-              {
-                question: "What is a Trust Agreement?",
-                answer: "A contract formally expressing the understanding between the grantor and trustee. It typically contains instructions on how the trust property should be held and invested, the purposes for which its benefits are used, and the duration of the trust."
-              },
-              {
-                question: "What are the advantages of naming WE Trust Company as a Trustee?",
-                answer: "Trusts managed by professional trustees are supervised and reviewed by internal and external auditors from regulatory authorities and audit firms. WE Trust Company is institutionally objective, impartial and has a duty of loyalty solely to trust beneficiaries."
-              },
-              {
-                question: "How should I name WE Trust Company in my Trust?",
-                answer: 'Please have the drafting attorney use the following language: "WE Trust Company, a Washington chartered trust company, and its successor and assigns."'
-              },
-              {
-                question: "How do you charge for your work as a Trustee?",
-                answer: "WE Trust Company charges a fee based upon assets held in the trust. A fee schedule is available upon request."
-              },
-            ].map((faq, index) => (
-              <div key={index}>
-                <h3
-                  className="text-lg sm:text-xl font-bold text-[#003d5c] mb-2"
-                  style={{ fontFamily: "'Open Sans', sans-serif" }}
-                >
-                  {faq.question}
-                </h3>
-                <p
-                  className="text-sm sm:text-base text-gray-700 leading-6"
-                  style={{ fontFamily: "'Nanum Gothic', sans-serif" }}
-                >
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
+        {/* TRUST TYPES BLOCK (slightly darker panel) */}
+        <section className="mb-16">
+          <div className="mb-6 flex items-center justify-between gap-4">
+            <h2
+              className="text-2xl sm:text-3xl font-semibold text-[#003d5c]"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Trusts We Professionally Manage
+            </h2>
           </div>
-        </div>
+
+          <div className="rounded-3xl bg-[#E1EDF9]/80 border border-[#C5D7EE] shadow-md p-6 sm:p-8">
+            <div className="grid sm:grid-cols-2 gap-7">
+              {trustTypes.map((item, i) => (
+                <div
+                  key={i}
+                  className={`p-5 rounded-2xl border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+                    i % 2 === 0
+                      ? "bg-white/90 border-slate-200"
+                      : "bg-[#F3F7FF]/90 border-[#D0DDF3]"
+                  }`}
+                >
+                  <h3
+                    className="text-lg font-semibold text-[#003d5c] mb-2"
+                    style={{ fontFamily: "Poppins, sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="text-slate-700 text-sm leading-relaxed"
+                    style={{ fontFamily: "Poppins, sans-serif" }}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ BLOCK (lighter panel, interactive accordion) */}
+        <section className="mt-4">
+          <div className="mb-6 flex items-center justify-between gap-4">
+            <h2
+              className="text-2xl sm:text-3xl font-bold text-[#003d5c]"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="rounded-3xl bg-white/90 border border-slate-200 shadow-md p-4 sm:p-6 space-y-4">
+            {faqs.map((faq, i) => {
+              const isOpen = openIndex === i;
+              return (
+                <div
+                  key={i}
+                  className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                    isOpen
+                      ? "bg-[#F3F8FF] border-[#BFD5F5] shadow-sm"
+                      : "bg-white border-slate-200 hover:bg-slate-50"
+                  }`}
+                >
+                  {/* Question row */}
+                  <button
+                    type="button"
+                    onClick={() => toggleFAQ(i)}
+                    className="w-full flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 text-left"
+                  >
+                    <span
+                      className="text-sm sm:text-base font-semibold text-[#003d5c]"
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
+                      {faq.q}
+                    </span>
+                    <span
+                      className={`ml-3 text-[#007dc5] transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      ▼
+                    </span>
+                  </button>
+
+                  {/* Answer */}
+                  <div
+                    className={`px-4 sm:px-5 pb-4 sm:pb-5 text-sm text-slate-700 leading-relaxed transition-all duration-300 ${
+                      isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                    style={{
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    {faq.a}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
       </div>
-    </div>
+    </section>
   );
 }
